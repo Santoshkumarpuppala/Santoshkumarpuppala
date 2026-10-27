@@ -8,12 +8,11 @@ the issue locally, report it privately to the maintainers, and stay with it unti
 
 ### Security research
 
-- **100+ vulnerabilities** reported and remediated across open-source projects
+- Vulnerabilities reported under coordinated disclosure across open-source projects; the public, fixed and credited ones are listed below
 - **CVE identifiers assigned** for a number of these; several credited to me by name
 - Most of the work concentrates on one root-cause class: **broken access control** — IDOR, missing
   authorization checks, and read/write permission asymmetries
-- Affected software includes systems operated by public health services, benefits administrators, civil
-  registries and government portals
+- Some affected projects are used in public-sector and civic settings
 
 I also write up the methodology, because a single fixed bug helps one project and a documented detection
 pattern helps everyone maintaining similar code.
@@ -33,22 +32,19 @@ A sample of findings that are public, fixed, and credited:
 
 | Advisory | Project | Issue | Fixed in |
 |---|---|---|---|
-| [GHSA-w7v5-7g6w-87r4](https://github.com/mailwatch/MailWatch/security/advisories/GHSA-w7v5-7g6w-87r4) | MailWatch | Any signed-in user could release or permanently delete another tenant's quarantined mail | 1.2.27 |
 | [GHSA-7cqp-qvh5-7x85](https://github.com/openfoodfoundation/openfoodnetwork/security/advisories/GHSA-7cqp-qvh5-7x85) | Open Food Network | An enterprise manager could read and alter customer account balances belonging to a different enterprise | 5.7.4 |
 | [GHSA-9vjj-v46c-c5qf](https://github.com/gammu/gammu/security/advisories/GHSA-9vjj-v46c-c5qf) | Gammu | A crafted SMS sender ID could inject shell metacharacters into a command the SMS daemon runs | 1.43.3 |
 | [GHSA-vf9q-phg3-hqj6](https://github.com/OpenFn/lightning/security/advisories/GHSA-vf9q-phg3-hqj6) | OpenFn Lightning | An authenticated user could read and modify data in projects they were not a member of by supplying that project's identifier | 2.17.0 |
 | [CVE-2026-54732](https://github.com/elwerene/libreoffice-convert/security/advisories/GHSA-gmxc-r82q-347r) | libreoffice-convert | An unsanitized filename allowed writing outside the intended directory | 1.8.2 |
 | [CVE-2026-16454](https://github.com/eclipse-hawkbit/hawkbit/security/advisories/GHSA-92r3-p8c2-3fpx) | Eclipse hawkBit | A `Range` header skipped the download authorization check, letting one device fetch another's firmware | 1.0.4 |
-| [CVE-2026-61746](https://github.com/inventree/InvenTree/security/advisories/GHSA-45f6-v6jq-99f7) | InvenTree | Plugin settings endpoints were readable without authentication | 1.4.0 |
 | [CVE-2026-55610](https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-vgx6-6cqr-m8qr) | InvoiceShelf | User records were looked up by global id without checking company ownership | 2.4.1 |
 
 ### Writing
 
-- [One unchecked filename let a popular npm document converter write to any path on disk (CVE-2026-54732)](https://dev.to/santosh_kumarpuppala_96e/one-unchecked-filename-let-a-popular-npm-document-converter-write-to-any-path-on-disk-9a3)
 - [A walk-through of a high-severity cross-company account-takeover bug in a widely-used open-source invoicing app (CVE-2026-55610)](https://medium.com/@santhoshkumar7794/a-walk-through-of-a-high-severity-cross-company-account-takeover-bug-in-a-widely-used-open-source-e7596a411268)
 - [Finding real bugs: a repeatable methodology for open-source vulnerability research](https://medium.com/@santhoshkumar7794/finding-real-bugs-a-repeatable-methodology-for-open-source-vulnerability-research-eacba5311acf)
 
-More on [Medium](https://medium.com/@santhoshkumar7794) and [dev.to](https://dev.to/santosh_kumarpuppala_96e).
+More on [Medium](https://medium.com/@santhoshkumar7794).
 
 ### Elsewhere
 
